@@ -1,0 +1,11 @@
+	cudaDeviceProp dp;
+	cudaGetDeviceProperties(&dp, 0);
+	printf("GPU name: %s\n",dp.name);
+	printf("compute capability %d:%d\n", dp.major, dp.minor);
+	printf("totalGlobalMem: %zd\n", dp.totalGlobalMem);
+	printf("sharedMemPerBlock: %zd\n", dp.sharedMemPerBlock);
+	printf("totalConstMem: %zd\n", dp.totalConstMem);
+	printf("regsPerBlock: %d\n", dp.regsPerBlock);
+	printf("maxThreadsDim: %d %d %d\n", dp.maxThreadsDim[0], dp.maxThreadsDim[1], dp.maxThreadsDim[2]);
+	printf("maxGridSize: %d %d %d\n", dp.maxGridSize[0], dp.maxGridSize[1], dp.maxGridSize[2]);
+	printf("multiProcessorCount: %d\n", dp.multiProcessorCount);
